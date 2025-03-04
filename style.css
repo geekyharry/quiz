@@ -5,12 +5,12 @@
   box-sizing: border-box;
 }
 
-.cont{
+.quiz-layout{
   height: 100vh;
   padding: 30px;
 }
 
-.qu-co{
+.app{
   width: 90%;
   max-width: 600px;
   margin: 0 auto 0;
@@ -19,7 +19,7 @@
   padding: 30px;
 }
 
-.qu-co h2{
+.app h2{
   font-size: 25px;
   color: black;
   font-weight: 500;
@@ -28,11 +28,11 @@
   text-align: center;
 }
 
-.qe{
+.quiz{
   padding: 20px 0;
 }
 
-.qe h2{
+.quiz h2{
 font-size: 18px;
 color: black;
 font-weight: 600;
@@ -51,12 +51,16 @@ font-weight: 600;
   cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover:not([disabled]){
   background: black;
   color: white;
 }
 
-#nxt-btn{
+.btn:disabled{
+  cursor: no-drop;
+}
+
+#next-btn{
   background: black;
   color: white;
   font-weight: 500;
@@ -68,6 +72,16 @@ font-weight: 600;
   display: none;
 }
 
+.correct{
+  background: #9ae3bc;
+}
+
+.incorrect{
+  background: #ff9393;
+  
+}
+
+/*Dark Mode*/
 .switch{
   position: relative;
   display: inline-block;
